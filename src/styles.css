@@ -1,1 +1,126 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #383f99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 480px;
+  height: 75vh;
+  background-color: #5546b1;
+  border-radius: 30px;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+.upper-data {
+  position: relative;
+  overflow: hidden;
+  height: 50%;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.upper-data img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.weather-data {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.55);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: azure;
+  gap: 1.5rem;
+}
+
+.temperature {
+  color: azure;
+  font-size: 4.8rem;
+  font-weight: 700;
+}
+
+.location {
+  font-size: 1.2rem;
+}
+
+.lower-data {
+  margin-top: 0.6rem;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-label {
+  color: azure;
+  font-weight: 500;
+  font-size: 1.15rem;
+  margin-left: 0.32rem;
+}
+
+.info-container {
+  color: beige;
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  margin-top: 0.2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.info-content {
+  display: flex;
+  width: 50%;
+  flex-direction: row;
+}
+
+.info-stats {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-stats img {
+  width: 2rem;
+}
+
+.info-stats span {
+  font-size: small;
+  font-weight: 400;
+}
+
+.info-value {
+  font-weight: 500;
+  font-size: 1.2rem;
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
