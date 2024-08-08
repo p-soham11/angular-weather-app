@@ -1,6 +1,11 @@
 <div class="search">
-  <form>
-    <input type="text" placeholder="Search City" />
+  <form #form="ngForm" (submit)="onSubmit()">
+    <input
+      type="text"
+      placeholder="Search City"
+      name="city"
+      [(ngModel)]="city"
+    />
   </form>
 </div>
 
@@ -25,10 +30,10 @@
       <div class="info-content">
         <div class="info-stats">
           <img src="/assets/max.png" />
-          <span>Feels Like</span>
+          <span>Max Temp</span>
         </div>
         <div class="info-value">
-          {{ weatherData.main.feels_like | number : "1.0-0" }}º C
+          {{ weatherData.main.temp_max | number : "1.0-0" }}º C
         </div>
       </div>
       <div class="info-content">
@@ -55,7 +60,7 @@
           <span>Wind</span>
         </div>
         <div class="info-value">
-          {{ weatherData.wind.speed | number : "1.0-0" }} KM/PH
+          {{ weatherData.wind.speed | number : "1.0-0" }} KM/H
         </div>
       </div>
     </div>
